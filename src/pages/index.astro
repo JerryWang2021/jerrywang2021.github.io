@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Welcome from "../components/Welcome.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Contact from "../components/Contact.astro";
+import Skills from "../components/Skills.astro";
+
+const pageTitle = "Home Page";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <Welcome />
+  <AboutMe />
+  <Portfolio />
+  <Skills />
+  <Contact />
+</BaseLayout>

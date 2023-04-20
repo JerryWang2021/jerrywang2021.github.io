@@ -1,0 +1,16 @@
+---
+const today = new Date();
+import Social from "./Social.astro";
+---
+
+<footer>
+  <p>Follow me on social media</p>
+  <div class="social-icons">
+    <Social platform="twitter" username="" />
+    <Social platform="github" username="" />
+    <Social platform="instagram" username="" />
+  </div>
+  <p class="copyright">&copy; {today.getFullYear()} ZHI WANG | All rights reserved.</p>
+   
+</footer>
+

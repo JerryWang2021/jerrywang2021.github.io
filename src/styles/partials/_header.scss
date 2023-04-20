@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 888;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  padding: 1em 2em;
+  
+ 
+  .menu-button {
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    background: transparent;
+    border: 0;
+    transition: transform ease-in-out 250ms;
+    cursor: pointer;
+    outline: none;
+  }
+
+  #themeToggle {
+    border: 0;
+    background: none;
+    .moon { fill: black; }
+    .sun { fill: transparent; }
+  }
+
+  :global(.light) .moon { fill: transparent; }
+  :global(.dark) .sun { fill: black; }
+
+  @include mq() {
+    .menu-button {
+      display: none;
+    }
+    .primary-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .site-logo {
+        a {
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-decoration: none;
+        }
+       
+      }
+      .nav-list {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.2em;
+        padding: 0 2.4em;
+        
+        li {
+          font-size: 1em;
+          padding: 0 0.5em;
+          list-style: none;
+  
+          a {
+            color: $dark-gray;
+            text-decoration: none;
+  
+            &:hover {
+              color: $accent;
+              background-color: rgba($color: #000000, $alpha: 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
