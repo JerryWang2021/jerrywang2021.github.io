@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+
+.list-sorter {
+  @include container;
+  @include clearfix;
+
+  margin: 8em auto;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Added to horizontally center the form */
+    flex-wrap: wrap; /* Added to wrap the elements if they exceed the width */
+    margin-bottom: 15 em;
+
+    label {
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    input[type="number"] {
+        flex-grow: 1;
+      padding: 5px;
+      font-size: 16px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    #generateBtn {
+      margin-top: 10px;
+    }
+  }
+
+  button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  #sortBtn,
+  #resetBtn {
+    margin-top: 10px;
+  }
+}

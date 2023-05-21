@@ -12,7 +12,7 @@
     }
 }
 
-@mixin mq ($width: 38em) {
+@mixin mq ($width: 50em) {
     @media  screen and ( min-width: $width) {
         @content;
     }
