@@ -5,6 +5,8 @@ import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
 
-$('.header__menu-hamburger').on('click', function() {
-  $('.header__menu').toggleClass('expanded');
+$(function () {
+  $('.header__menu-hamburger').on('click', function () {
+    $('.header__menu').toggleClass('expanded');
+  });
 });
